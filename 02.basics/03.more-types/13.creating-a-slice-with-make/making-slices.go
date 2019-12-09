@@ -6,7 +6,7 @@ func main() {
 	a := make([]int, 5)  //組み込みの make 関数を使用して、スライス（動的サイズの配列）を作成できる
 	printSlice("a", a)  //a len=5 cap=5 [0 0 0 0 0]
 
-	b := make([]int, 0, 5)
+	b := make([]int, 0, 5)  //make 関数の 3番目の引数に、スライスの容量を指定できる
 	printSlice("b", b)  //b len=0 cap=5 []
 
 	c := b[:2]
