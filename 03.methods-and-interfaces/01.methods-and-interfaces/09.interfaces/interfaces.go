@@ -13,15 +13,15 @@ type Abser interface {
 
 func main() {
 	var a Abser
-	f := MyFloat(-math.Sqrt2)
-	v := Vertex{3, 4}
+	f := MyFloat(-math.Sqrt2)  // => -1.4142135623730951
+	v := Vertex{3, 4}  // => {3, 4}
 
-	a = f
-	a = &v 
+	a = f   // => -1.4142135623730951
+	a = &v  // => &{3 4}
 
-	a = v  // => error : Vertex does not implement Abser (Abs method has pointer receiver)
+//	a = v  // => error : Vertex does not implement Abser (Abs method has pointer receiver)
 
-	fmt.Println(a.Abs())
+	fmt.Println(a.Abs())  // => 5
 }
 
 type MyFloat float64
