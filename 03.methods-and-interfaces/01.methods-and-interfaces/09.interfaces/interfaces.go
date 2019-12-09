@@ -6,6 +6,7 @@ import (
 )
 
 //interface は、メソッドをひとまとめにした構造体（struct）のようなもの
+//そのメソッドの集まりを実装した値を、interface型の変数へ持たせることができる
 //処理に必要なメソッドを、都度呼び出すことができるようになる
 type Abser interface {
 	Abs() float64
