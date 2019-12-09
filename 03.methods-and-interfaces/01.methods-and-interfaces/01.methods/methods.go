@@ -15,5 +15,5 @@ func (v Vertex) Abs() float64 {  //func レシーバ （メソッドが定義さ
 
 func main() {
 	v := Vertex{3, 4}
-	fmt.Println(v.Abs())
+	fmt.Println(v.Abs())  //メソッド呼び出し => 5
 }
