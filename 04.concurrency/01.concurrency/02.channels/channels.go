@@ -15,8 +15,8 @@ func main() {
 	s := []int{7, 2, 8, -9, 4, 0}
 
 	c := make(chan int)  // チャネルを生成
-	go sum(s[:len(s)/2], c)  //スライス内の数値を合算し、2つのgoroutine間で作業を分配
-	go sum(s[len(s)/2:], c)  //スライス内の数値を合算し、2つのgoroutine間で作業を分配
+	go sum(s[:len(s)/2], c)  //スライス内の数値を合算し、2つの goroutine 間で作業を分配 => 両方の goroutine で計算が完了すると、最終結果が計算される
+	go sum(s[len(s)/2:], c)  //スライス内の数値を合算し、2つの goroutine 間で作業を分配 => 両方の goroutine で計算が完了すると、最終結果が計算される
 	x, y := <-c, <-c  // c から受信した変数を x, y へ割り当てる
 
 	fmt.Println(x, y, x+y)
