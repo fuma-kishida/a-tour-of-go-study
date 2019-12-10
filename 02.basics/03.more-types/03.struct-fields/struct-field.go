@@ -8,7 +8,7 @@ type Vertex struct {
 }
 
 func main() {
-	v := Vertex{1, 2}
-	v.X = 4
+	v := Vertex{1, 2} //構造体の初期化方法① => {} で順番にフィールドの値を渡す
+	v.X = 4  //構造体の初期化方法② => 変数定義後にフィールドを設定する
 	fmt.Println(v.X)  //=> 4
 }
