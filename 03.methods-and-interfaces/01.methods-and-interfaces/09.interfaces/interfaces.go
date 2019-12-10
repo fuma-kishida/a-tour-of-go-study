@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-//interface は関数（メソッド）をまとめたもの
+//interface は関数（メソッド）をまとめた構造体のようなもの
 //具体的な実装を気にすることなく1つのまとまった塊として定義できることで、他の関数から扱いやすくなる
 type Abser interface {
 	Abs() float64
