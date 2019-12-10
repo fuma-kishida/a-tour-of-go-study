@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type I interface {
-	M()  //I型に M() メソッドを実装
+	M()
 }
 
 type T struct {
